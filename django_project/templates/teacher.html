@@ -1,0 +1,148 @@
+<html>
+    <style>
+        h1{
+            margin-left: 55%;
+            font-size: 60px;
+            color:cornflowerblue;
+        }
+        
+        #slider {
+            width: 50%;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+            margin-left: 20%;
+            }
+
+        .slides {
+            display: flex;
+            width: 100%;
+            height: 130%;
+            transition: transform 0.3s ease-in-out;
+            }
+
+        .slides img {
+            width: 50%;
+            height:50%;
+            }
+
+        .navigation-btn {
+            position: absolute;
+            top: 35%;
+            transform: translateY(-50%);
+            font-size: 30px;
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 5px;
+            cursor: pointer;
+            }
+
+        #prevBtn {
+            left: 10px;
+            }
+
+        #nextBtn {
+            right: 10px;
+            }
+            a{
+            text-decoration:none;
+            color: white;
+            padding: 10%;
+        }
+        a:hover{
+            color: blue;
+            background-color: #9AC5F4;
+        }
+        body{
+            margin: 0;
+        }
+    </style>    
+    <body>
+        <script src="https://kit.fontawesome.com/d3fca405d5.js" crossorigin="anonymous"></script>
+        <div style="background-color: rgb(82, 166, 211); width: 100%;height: 10%;margin-top: 0%;margin-left: 0%;">
+            <table>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr></tr>
+                <tr>
+                    <td style="width: 34%;"></td>
+                        <th style="width: 6%;"><a href="{% url 'home' %}">Home</a></th>
+                        <th style="width: 6%;"><a href="{% url 'courses' %}">Courses</a></th>
+                        <th style="width: 6%;"><a href="{% url 'teachers' %}">Teachers</a></th>
+                        <th style="width: 6%;"><a href="{% url 'reviews' %}">Reviews</a></th>
+                        <th style="width: 7%;"><a href="{% url 'logout' %}">LogOut <i class="fa-solid fa-right-from-bracket"></i></a></th>
+                </tr>
+            </table>
+        </div>
+        <h1>Tutors</h1>
+        {%load static %} <img src="{% static 'app1/media/vt.jpg' %}" style="float: left;">
+        <center>
+        <div id="slider">
+            <div class="slides">
+              {%load static %}<img src="{% static 'app1/media/p1.avif' %}" alt="Image 1">
+              {%load static %}<img src="{% static 'app1/media/p2.jpg' %}" alt="Image 2">
+              {%load static %}<img src="{% static 'app1/media/p3.avif' %}" alt="Image 3">
+              {%load static %}<img src="{% static 'app1/media/p4.jpg' %}" alt="Image 1">
+              {%load static %}<img src="{% static 'app1/media/p5.jpg' %}" alt="Image 2">
+              {%load static %}<img src="{% static 'app1/media/p6.jpg' %}" alt="Image 3">
+            </div>
+            <div id="prevBtn" class="navigation-btn">&#10094;</div>
+            <div id="nextBtn" class="navigation-btn">&#10095;</div>
+        </div></center>
+        <div class="down" style="height: 30%;width: 100%;background-color:gray;">
+                    
+            <table style="margin-left: 40%;">
+                <tr>
+                    <td style="color: white;"><i class="fa-solid fa-phone"></i>123456789</td>
+                </tr>
+                <tr>
+                    <td style="color: white;"><i class="fa-duotone fa-phone-office"></i>+49 6421 28-22222</td>
+                </tr>
+                <tr>
+                    <td style="color: white;"><i class="fa-regular fa-envelope"></i>ABC@gmail.com</td>
+                </tr>
+            </table><hr>
+            <center><pre style="color: white;">  <i class="fa-brands fa-facebook-f"></i>     <i class="fa-brands fa-twitter"></i>     <i class="fa-brands fa-youtube"></i>   <i class="fa-brands fa-instagram"></i></pre></center>
+
+        </div>
+        <script>
+            const slidesContainer = document.querySelector('.slides');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            const slides = Array.from(slidesContainer.querySelectorAll('img'));
+
+            const slideWidth = slidesContainer.clientWidth;
+            let currentIndex = 0;
+
+            // Set initial slide position
+            slidesContainer.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+
+            // Update slide position
+            function updateSlidePosition() {
+            slidesContainer.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+            }
+
+            // Slide to the previous image
+            function slideToPrev() {
+            currentIndex = (currentIndex === 0) ? slides.length - 1 : currentIndex - 1;
+            updateSlidePosition();
+            }
+
+            // Slide to the next image
+            function slideToNext() {
+            currentIndex = (currentIndex === slides.length - 1) ? 0 : currentIndex + 1;
+            updateSlidePosition();
+            }
+
+            // Event listeners for manual navigation
+            prevBtn.addEventListener('click', slideToPrev);
+            nextBtn.addEventListener('click', slideToNext);
+
+        </script>
+    </body>
+
+</html>
