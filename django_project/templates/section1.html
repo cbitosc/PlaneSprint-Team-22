@@ -1,0 +1,275 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        ol {
+            list-style-type: none; /* Remove bullets */
+            padding: 0; /* Remove padding */
+            margin: 0; /* Remove margins */
+            color: dodgerblue;
+        }
+
+        .collapsible {
+            background-color: #9fbfda;
+            color: white;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            padding-bottom: 10px;
+        }
+
+            .active, .collapsible:hover {
+                background-color: #1a8ae4;
+            }
+
+        .content {
+            font-size: 8px;
+            padding: 5px;
+            display: none;
+            overflow: hidden;
+            color: aquamarine;
+            text-align:center;
+        }
+
+        .sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #9fbfda;
+            overflow-x: hidden;
+            padding-top: 60px;
+            transition: 0.5s;
+        }
+
+            .sidenav a {
+                padding: 8px 8px 8px 32px;
+                text-decoration: none;
+                font-size: 20px;
+                color: white;
+                display: block;
+                transition: 0.3s;
+                padding-left: 20px;
+                text-align:center;
+
+            }
+
+            .sidenav .closebtn {
+                position: absolute;
+                top: 0;
+                right: 25px;
+                font-size: 36px;
+                margin-left: 50px;
+            }
+
+        #main {
+            transition: margin-left 1.0s;
+            padding: 20px;
+        }
+
+        .Main {
+            transition: 0.9s;
+        }
+
+        li {
+            padding-bottom: 5px;
+          
+        }
+        table{
+            background-color:cornsilk;
+            
+        }
+
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .sidenav a:hover {
+            color: #fbe0d3;
+        }
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 80%;
+        }
+       
+        
+    </style>
+</head>
+<body>
+    <script>
+
+    </script>
+    <script>
+
+
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+            document.getElementById("Main").style.paddingLeft = "250px";
+
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("Main").style.paddingLeft = "0";
+        }
+
+
+    </script>
+    <div id="mySidenav" class="sidenav">
+      
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <center><img src="https://img.freepik.com/premium-vector/ai-technology-icon-with-chip-head-line-vector_116137-4974.jpg" height="200px" width="150px" style="border-radius:25px"></center>
+        <br /><br />
+              <button type="button" class="collapsible" onclick="collapse()" style="font-size: 20px; font-family: 'Times New Roman';">Section 1</button>
+        <div class="content">
+            <ol>
+                <li><a href="#Section1.1">Section 1.1</a></li>
+                <li><a href="#Section1.2">Section 1.2</a></li>
+            </ol>
+        </div>
+        <button type="button" class="collapsible" onclick="collapse()" style="font-size:20px;font-family:'Times New Roman';">Section 2</button>
+        <div class="content">
+        
+                <ol>
+                    <li>><a href="#Section1.1">Section 2.1</a></li>
+                    <li><a href="#Section1.2">Section 2.2</a></li>
+
+                </ol>
+          
+        </div>
+        <button type="button" class="collapsible" onclick="collapse()" style="font-size: 20px; font-family: 'Times New Roman';">Section 3</button>
+        <div class="content">
+            
+            <ol>
+                <li><a href="#Section1.1">Section 3.1</a></li>
+                <li><a href="#Section1.2">Section 3.2</a></li>
+
+            </ol>
+         
+        </div>
+        <br />
+        <br />
+        <br />
+
+
+    </div>
+    <span style="font-size:30px;cursor:pointer;position:fixed;" onclick="openNav()">&#9776; </span>
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                    content.style.display = "none";
+                } else {
+                    content.style.display = "block";
+                }
+            });
+        }
+    </script>
+    <div id="Main" class="Main">
+                    
+              <td>{% load static %}<img src="{% static 'app1/media/video.png' %}" class="center" /></td>
+              <div id="info">
+                  <center>
+                      <table width="80% ">
+                          <tr>
+                              <td>
+
+                                  <h2>Lesson Overview</h2>
+                                  <p style="font-family:'Times New Roman';line-height:20px;text-align:justify;padding-bottom:30px;">
+
+                                      This section contains a general overview of topics that you will learn in this lesson.
+
+                                      Explain techniques for asking programming questions
+                                      Explain and avoid qualities of “bad” questions
+                                      Ask effective and well formed questions.Along your programming journey, you will inevitably need to ask questions in an online coding community like ours, or in conversations with your colleagues. While asking questions may seem rather simple, in a programming environment it is essential to ask well formed questions with as much context as needed so you can get the most out of asking for help. In essence, “help others help you!”
+                                  </p>
+                                  <h2> Tips for Getting the Best Help Possible</h2>
+                                  <p>
+                                      Always Provide Your Code and the Surrounding Context
+                                      You can ask theoretical, vague questions, but you’re going to get theoretical, vague answers that probably won’t be helpful to you and cause frustration on both ends as you and the person helping you dance around the real issue. The only time code doesn’t need to be provided is if you are asking a purely conceptual question outside of a specific project or code snippet. Additionally, provide as much context as is necessary, and zero in on the specific problem, such as pointing people to a specific function or line number in your code so people can give you the most relevant answers and quickly assist you.
+
+                                      Ask About the Problem at Hand, Not the Solution Itself
+                                      A lot of learners ask exactly how to approach a given task or assignment in this curriculum, such as the below:
+
+                                      “How do I complete Step 5 of the Rock Paper Scissors Assignment”?
+                                      Keep in mind that you’re actually supposed to figure out how to solve the assignments yourself, and figuring out an approach is essential to your learning journey. A much better question might look like this:
+                                  </p>
+                              </td>
+                          </tr>
+                          <tr>
+
+                              <td>
+                                  <center>
+                                      <table width="70%" style="background-color:azure;">
+                                          <tr><td><h2 style="text-align:center;">ASSIGNMENT</h2></td></tr>
+                                          <tr>
+                                              <td>
+                                                  <ul>
+                                                      <li>Read and bookmark this amazing article by Gordon Zhu. It is a great reference to refer to whenever you find yourself needing to ask for help, and you might find yourself solving your own problem as you think about the points listed in the article.</li>
+                                                      <li>
+                                                          Read about the “XY Problem”, which is a common pitfall both new and experienced programmers fall into when asking questions.
+                                                      </li>
+                                                      <li>
+                                                          Check out this article from the world’s most popular programming help resource, Stack Overflow.
+                                                      </li>
+                                                  </ul>
+
+                                              </td>
+                                          </tr>
+
+                                      </table>
+                                  </center>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td>
+                                  <h2> Knowledge Check</h2>
+                                  <ul>
+                                      <li>Describe the “XY Problem”.</li>
+                                      <li>Describe three attributes of a “help vampire”.</li>
+                                  </ul>
+                              </td>
+                          </tr>
+                      </table>
+                  </center>
+                  <br />
+
+                  <center>
+                      <table width="80%" style="background-color: #343434;height:50px;">
+                          <tr>
+                              <td>
+                                  <button style="background-color: #b293cb;">Previous Section</button>
+                              </td>
+                              <td><button style="background-color:#f18f66 ;">Mark as Complete</button></td>
+                              <td><button style="background-color: #f18f66;">Next Section</button></td>
+                          </tr>
+                  </center>
+                  </table>
+              </div>
+                      
+                      
+
+                   
+
+        
+    </div>
+</body>
+</html>

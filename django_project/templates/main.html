@@ -1,0 +1,129 @@
+<html>
+
+    <head>
+        <title>Education Portal</title>
+        <style>
+            body {
+                margin: 0;
+            }
+
+            h1 {
+                float: left;
+                font-size: 80px;
+                color: white;
+                margin-left: 1%;
+            }
+
+            a {
+                color: white;
+            }
+
+            h2 {
+                color: white;
+            }
+
+            a {
+                text-decoration: none;
+                padding: 10%;
+            }
+
+            a:hover {
+                color: blue;
+                background-color: #9AC5F4;
+            }
+
+            img {
+                height: 50px;
+                width: 50px;
+                border-radius: 50%;
+            }
+        </style>
+        <script src="https://kit.fontawesome.com/d3fca405d5.js" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+        <div class="total"
+            style="height: 90%;width: 100%;background-image: url('/static/app1/media/mbg.jpg');background-repeat: no-repeat;background-size: 100% 100%;">
+            <div style="background-color: rgb(82, 166, 211); width: 100%;height: 10%; ">
+                <table>
+                    <tr></tr>
+                    <tr></tr>
+                    <tr></tr>
+                    <tr></tr>
+                    <tr></tr>
+                    <tr></tr>
+                    <tr>
+                        <td style="width: 34%;"></td>
+                        <th style="width: 6%;"><a href="{% url 'home' %}">Home</a></th>
+                        <th style="width: 6%;"><a href="{% url 'courses' %}">Courses</a></th>
+                        <th style="width: 6%;"><a href="{% url 'teachers' %}">Teachers</a></th>
+                        <th style="width: 6%;"><a href="{% url 'reviews' %}">Reviews</a></th>
+                        <th style="width: 7%;"><a href="{% url 'logout' %}">LogOut <i
+                                    class="fa-solid fa-right-from-bracket"></i></a></th>
+
+                    </tr>
+                </table>
+            </div>
+            <h1>Study</h1><br><br><br>
+            <h1>Buddies</h1>
+
+            <center>{% load static %} <img src="{% static 'app1/media/1.jpg' %}"
+                    style="width: 25%;height: 50%;border-radius: 20%;"></center>
+            <table size="60%" align="center" style="padding-left:530px;">
+                <tr>
+                    <th style="height: 80px;width: 100px;color: whitesmoke">{% load static %}<img
+                            src="{% static 'app1/media/2.jpg' %}" style="float: left;height: 50px;width: 40px;">4+
+                        Courses</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <th style="height: 80px;width: 100px;color: white;">{% load static %}<img
+                            src="{% static 'app1/media/3.jpg' %}" style="float: left;height: 50px;width: 40px;">100+
+                        Students</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <th style="height: 80px;width: 100px;color: white;">{% load static %}<img
+                            src="{% static 'app1/media/4.jpg' %}" style="float: left;height: 50px;width: 40px;">5+
+                        Teachers</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <th style="height: 80px;width: 100px;color: white;">{% load static %}<img
+                            src="{% static 'app1/media/5.jpg' %}" style="float: left;height: 50px;width: 40px;">100%
+                        Satis
+                        faction</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+
+                </tr>
+            </table>
+            <div class="down" style="height: 30%;width: 100%;margin-top: 8%;background-color:gray;">
+
+                <table style="margin-left: 40%;">
+                    <tr>
+                        <td style="color: white;"><i class="fa-solid fa-phone"></i>123456789</td>
+                    </tr>
+                    <tr>
+                        <td style="color: white;"><i class="fa-duotone fa-phone-office"></i>+49 6421 28-22222</td>
+                    </tr>
+                    <tr>
+                        <td style="color: white;"><i class="fa-regular fa-envelope"></i>ABC@gmail.com</td>
+                    </tr>
+                </table>
+                <hr>
+                <center>
+                    <pre
+                        style="color: white;">  <i class="fa-brands fa-facebook-f"></i>     <i class="fa-brands fa-twitter"></i>     <i class="fa-brands fa-youtube"></i>   <i class="fa-brands fa-instagram"></i></pre>
+                </center>
+
+            </div>
+        </div>
+    </body>
+
+</html>

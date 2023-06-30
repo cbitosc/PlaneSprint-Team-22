@@ -1,0 +1,191 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        table {
+            background-color: white;
+            padding:5px;
+        }
+        td{
+            padding:10px;
+        }
+        .collapsible {
+            background-color: #777;
+            color: white;
+            cursor: pointer;
+            padding: 18px;
+            width: 70%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            
+        }
+        h2{
+            font-size:40px;
+                      
+        }
+        .subsections1, .subsections2, .subsections3, .subsections4, .subsections5, .subsections6 {
+            background-color: lightgray;
+            color: black;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+        }
+        .active, .collapsible:hover {
+            background-color: #677c9f;
+        }
+
+        .content {
+            padding: 10px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+            background-color: #f1f1f1;
+            color: black;
+            width: 68.70%;
+            text-align: left;
+        }
+
+        .subsections1:hover, .subsections2:hover, .subsections3:hover, .subsections4:hover, .subsections5:hover, .subsections6:hover {
+            background-color: lightcyan;
+        }
+
+      
+    </style>
+</head>
+<body>
+    <center>
+        <div id="course_profile" style="box-shadow: 0 0 20px black;width:80%;">
+
+            <center>
+                <table cellspacing="0" cellpadding="0" width="70%" style="font-size:20px;">
+                    <tr>
+
+                        <td>
+                            <h1>Artificial Intelligence</h1>
+                            <img src="https://img.freepik.com/premium-vector/ai-technology-icon-with-chip-head-line-vector_116137-4974.jpg" style="border-radius: 10px;box-shadow:0 0 20px black; height: 350px;" width="100%" />
+                        </td>
+
+                        <td>
+                            <br />
+                            <table>
+                                <tr>
+                                    <td>&#8801  Category: </td>
+                                    <td>
+                                        Artificial Intelligence
+
+                                    </td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>&#128338; Duration:</td>
+                                    <td>
+                                       2 weeks
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td> &#128448; No. of Projects:</td>
+                                    <td>
+                                        2
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>&#128366; Prerequisites:</td>
+                                    <td>
+                                        Lorem ipsum
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+
+                <center>
+                    <table width="70%">
+                        <tr>
+                            <td>
+                                <h2>About </h2>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                                </p>
+                            </td>
+                        </tr>
+                    </table>
+                    <table width="70%">
+                        <tr>
+                            <td>
+                                <h2>Professor </h2>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2">{% load static %} <img src="{% static 'app1/media/prof.png' %}" /></td>
+                            <td>Professor XYZ</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                            </td>
+                        </tr>
+                    </table>
+
+
+                </center>
+            </center>
+            <br />
+            <br />
+            <center>
+                <button class="collapsible">Open Section 1</button>
+                <div class="content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <button type="button" class="subsections1"><a style="text-decoration:none;color:black;" href="{% url 'section1' %}"> &#128366;  Section 1.1</a></button>
+                    <button type="button" class="subsections2">&#128366; Section 1.2</button>
+
+                </div>
+                <button class="collapsible">Open Section 2</button>
+                <div class="content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <button type="button" class="subsections3"> &#128366;  Section 2.1</button>
+                    <button type="button" class="subsections4">&#128366; Section 2.2</button>
+                </div>
+                <button class="collapsible">Open Section 3</button>
+                <div class="content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <button type="button" class="subsections5"> &#128366;  Section 3.1</button>
+                    <button type="button" class="subsections6">&#128366; Section 3.2</button>
+                </div>
+            </center>
+        </div>
+        </div>
+    </center>
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                }
+            });
+        }
+    </script>
+
+</body>
+</html>

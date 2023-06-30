@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      .container {
+        position: relative;
+        width: 50%;
+        max-width: 300px;
+        background-color: white;
+        margin: 10px;
+        padding: 1%;
+        border-radius: 10%;
+        box-shadow: 0 0 20px white;
+      }
+
+      .image {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+
+      .overlay {
+        position: absolute;
+        bottom: 0;
+        background: rgb(0, 0, 0);
+        background: rgba(0, 0, 0, 0.5);
+        /* Black see-through */
+        color: #f1f1f1;
+        width: 100%;
+        transition: .5s ease;
+        opacity: 0;
+        color: white;
+        font-size: 20px;
+        padding: 1%;
+        margin-left: -10px;
+        text-align: center;
+        border-radius: 15%;
+      }
+
+      .container:hover .overlay {
+        opacity: 1;
+      }
+
+      .a {
+        display: flex;
+        background-color: pink;
+        margin-left: 120px;
+      }
+
+      p {
+        color: black;
+      }
+
+      h1 {
+        font-size: 40px;
+        text-align: center;
+        color: white;
+      }
+
+      img {
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+      }
+
+      a {
+        text-decoration: none;
+        color: white;
+        padding: 10%;
+      }
+
+      a:hover {
+        color: blue;
+        background-color: #9AC5F4;
+      }
+
+      body {
+        margin: 0;
+        background-color: pink;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+    </style>
+    <script src="https://kit.fontawesome.com/d3fca405d5.js" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+    <div style="background-color: rgb(82, 166, 211); width: 100%; height: 55px;">
+      <table>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr></tr>
+        <tr>
+          <td style="width: 34%;"></td>
+          <th style="width: 6%;"><a href="{% url 'home' %}">Home</a></th>
+          <th style="width: 6%;"><a href="{% url 'courses' %}">Courses</a></th>
+          <th style="width: 6%;"><a href="{% url 'teachers' %}">Teachers</a></th>
+          <th style="width: 6%;"><a href="{% url 'reviews' %}">Reviews</a></th>
+          <th style="width: 7%;"><a href="{% url 'logout' %}">LogOut <i class="fa-solid fa-right-from-bracket"></i></a>
+          </th>
+        </tr>
+      </table>
+    </div>
+    <h1>Reviews</h1>
+    <center>
+      <div class="a">
+        <div class="container">
+          <p>"I absolutely loved this course! The professor explained complex psychological concepts in a way that was
+            easy to understand. The assignments and discussions were engaging, and I learned so much about human
+            behavior and the mind. Highly recommended for anyone interested in psychology!"</p>
+          <div class="overlay">{% load static %}<img src="{% static 'app1/media/p1.avif'%}">
+            <center>Riya <span style="color: gold;"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                  class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+            </center>
+          </div>
+        </div>
+        <div class="container">
+          <p>"This course was challenging but rewarding. The material was presented clearly, and the programming
+            assignments helped me develop my coding skills. The professor was always available to answer questions and
+            provided helpful feedback. It was a great foundation for further studies in computer science."</p>
+          <div class="overlay">{% load static %}<img src="{% static 'app1/media/p2.jpg'%}">
+            <center>John <span style="color: gold;"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                  class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                  class="fa-solid fa-star-half-stroke"></i></span></center>
+          </div>
+        </div>
+        <div class="container">
+          <p>"I found this course extremely valuable for understanding the basics of financial accounting. The
+            instructor was knowledgeable and patient, guiding us through complex concepts step by step. The course
+            projects allowed us to apply what we learned to real-world scenarios. It was a bit demanding, but definitely
+            worth the effort!"</p>
+          <div class="overlay">{% load static %}<img src="{% static 'app1/media/p3.avif'%}">
+            <center>Mary <span style="color: gold;"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                  class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span></center>
+          </div>
+        </div>
+      </div>
+      <div class="a">
+        <div class="container">
+          <p>"I found this course extremely valuable for understanding the basics of financial accounting. The
+            instructor was knowledgeable and patient, guiding us through complex concepts step by step. The course
+            projects allowed us to apply what we learned to real-world scenarios. It was a bit demanding, but definitely
+            worth the effort!"</p>
+          <div class="overlay">{% load static %}<img src="{% static 'app1/media/p4.jpg'%}">
+            <center>Harry <span style="color: gold;"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                  class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+            </center>
+          </div>
+        </div>
+        <div class="container">
+          <p>"I had an amazing experience in this creative writing course! The instructor created a supportive
+            environment for sharing our work and provided constructive feedback. The workshops with other students were
+            inspiring and helped me improve my writing skills. I would take this course again in a heartbeat!"</p>
+          <div class="overlay">{% load static %}<img src="{% static 'app1/media/p5.jpg'%}">
+            <center>Mac <span style="color: gold;"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                  class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                  class="fa-solid fa-star-half-stroke"></i></span></center>
+          </div>
+        </div>
+        <div class="container">
+          <p>"As someone who struggles with numbers, I was pleasantly surprised by how much I enjoyed this statistics
+            course. The professor broke down complex statistical concepts into manageable parts and used practical
+            examples to illustrate them. The course materials and exercises were helpful for reinforcing the learning.
+            Highly recommended for anyone looking to conquer their fear of statistics!"</p>
+          <div class="overlay">{% load static %}<img src="{% static 'app1/media/p6.jpg'%}">
+            <center>Veer <span style="color: gold;"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                  class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+            </center>
+          </div>
+        </div>
+      </div>
+    </center>
+    <div class="down" style="height: 30%;width: 100%;background-color:gray;">
+
+      <table style="margin-left: 40%;">
+        <tr>
+          <td style="color: white;"><i class="fa-solid fa-phone"></i>123456789</td>
+        </tr>
+        <tr>
+          <td style="color: white;"><i class="fa-duotone fa-phone-office"></i>+49 6421 28-22222</td>
+        </tr>
+        <tr>
+          <td style="color: white;"><i class="fa-regular fa-envelope"></i>ABC@gmail.com</td>
+        </tr>
+      </table>
+      <hr>
+      <center>
+        <pre
+          style="color: white;">  <i class="fa-brands fa-facebook-f"></i>     <i class="fa-brands fa-twitter"></i>     <i class="fa-brands fa-youtube"></i>   <i class="fa-brands fa-instagram"></i></pre>
+      </center>
+
+    </div>
+  </body>
+
+</html>
